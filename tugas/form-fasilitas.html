@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Fasilitas</title>
+    <link rel="stylesheet" href="form-fasilitas.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Form Tambah Fasilitas</h2>
+        <form id="facilityForm">
+            <div class="form-group">
+                <label>ID Fasilitas:</label>
+                <input type="text" id="idFasilitas" placeholder="Masukkan ID Fasilitas">
+                <div class="error" id="idFasilitasError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Nama Fasilitas:</label>
+                <input type="text" id="namaFasilitas" placeholder="Masukkan Nama Fasilitas">
+                <div class="error" id="namaFasilitasError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Harga Weekend:</label>
+                <input type="number" id="hargaWeekend" placeholder="Masukkan Harga Weekend">
+                <div class="error" id="hargaWeekendError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Harga Weekday:</label>
+                <input type="number" id="hargaWeekday" placeholder="Masukkan Harga Weekday">
+                <div class="error" id="hargaWeekdayError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Kuota:</label>
+                <input type="number" id="kuota" placeholder="Masukkan Kuota">
+                <div class="error" id="kuotaError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Jam Buka:</label>
+                <input type="time" id="jamBuka">
+                <div class="error" id="jamBukaError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Jam Tutup:</label>
+                <input type="time" id="jamTutup">
+                <div class="error" id="jamTutupError"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">Tambah Fasilitas</button>
+        </form>
+    </div>
+
+    <script src="form-fasilitas.js"></script>
+
+</body>
+
+</html>

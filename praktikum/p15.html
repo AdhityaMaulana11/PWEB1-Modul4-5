@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 2 Dimensi dan 3 dimensi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Array 2 dimensi dan 3 Dimensi</h1>
+
+    <button onclick="tampilkanArray2D()">Tampilkan Array 2D</button>
+    <button onclick="tampilkanArray3D()">Tampilkan Array 3D</button>
+
+    <div id="output"></div>
+
+    <script>
+        // inisialisasi array 2 dimensi
+        const array2D = [
+            ["anggur","apel","jeruk"],
+            ["mangga","pisang","kiwi"],
+            ["semangka","nanas","stroberi"],
+        ];
+
+        // inisialisasi array 3 dimensi
+        const array3D = [
+            [
+                ["anggur","apel"],
+                ["jeruk","mangga"],
+            ],
+            [
+                ["pisang","kiwi"],
+                ["semangka","nanas"],
+            ],
+            [
+                ["stroberi","blueberry"],
+                ["rasberry","cerry"],
+            ],
+        ];
+
+        // fungsi untuk menampilkan isi array 2 dimensi
+        function tampilkanArray2D(){
+            const output = document.getElementById("output");
+            let result = "<strong> Isi Array 2D :</strong><br>";
+            array2D.forEach((row) =>{
+                result += row.join(", ")+ "<br>";
+            });
+            output.innerHTML = result;
+        }
+        // fungsi untuk menampilkan isi array 3 dimensi
+        function tampilkanArray3D(){
+            const output = document.getElementById("output");
+            let result = "<strong> Isi Array 3D :</strong><br>";
+            array3D.forEach((matrix) => {
+                matrix.forEach((row) => {
+                    result += row.join(", ") + "<br>";
+                });
+                result += "<br>"; //tambahkan jarak antar mamtrix
+            });
+            output.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

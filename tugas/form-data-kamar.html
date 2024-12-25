@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Kamar</title>
+    <link rel="stylesheet" href="form-data-kamar.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Form Tambah Data Kamar</h2>
+        <form id="roomForm">
+            <div class="form-group">
+                <label>ID Kamar:</label>
+                <input type="text" id="roomId" placeholder="Masukkan ID Kamar">
+                <div class="error-message" id="roomIdError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Gambar Ruangan:</label>
+                <input type="file" id="roomImage">
+                <div class="error-message" id="roomImageError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Jenis Kamar:</label>
+                <input type="text" id="roomType" placeholder="Masukkan Jenis Kamar">
+                <div class="error-message" id="roomTypeError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Harga:</label>
+                <input type="number" id="roomPrice" placeholder="Masukkan Harga">
+                <div class="error-message" id="roomPriceError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Fasilitas:</label>
+                <textarea id="roomFacilities" placeholder="Masukkan Fasilitas"></textarea>
+                <div class="error-message" id="roomFacilitiesError"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">Tambah Kamar</button>
+        </form>
+    </div>
+
+    <script src="form-data-kamar.js"></script>
+
+</body>
+
+</html>

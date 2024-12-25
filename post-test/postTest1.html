@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Perhitungan Gaji</title>
+    <link rel="stylesheet" href="./style/postTest1.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Perhitungan Gaji</h2>
+        <form name="form1" action="">
+            <div class="form-group">
+                <label for="gol">Golongan</label>
+                <select name="gol" id="gol" onchange="showGapok()">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="anak">Jumlah Anak</label>
+                <input type="text" name="anak" id="anak" size="10" maxlength="10" required>
+            </div>
+            <div class="form-buttons">
+                <button type="button" name="hitung" onclick="hit()">Hitung</button>
+                <button type="reset" name="batal" value="cancel">Cancel</button>
+            </div>
+            <div class="form-group">
+                <label for="gapok">Gaji Pokok</label>
+                <input type="text" name="gapok" id="gapok" disabled>
+            </div>
+            <div class="form-group">
+                <label for="tunjangan">Tunjangan</label>
+                <input type="text" name="tunjangan" id="tunjangan" disabled>
+            </div>
+            <div class="form-group">
+                <label for="gaji">Gaji Bersih</label>
+                <input type="text" name="gaji" id="gaji" disabled>
+            </div>
+        </form>
+    </div>
+    <script src="./script/postTest1.js"></script>
+</body>
+
+</html>

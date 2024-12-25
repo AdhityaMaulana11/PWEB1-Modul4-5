@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Penjualan Barang</title>
+    <link rel="stylesheet" href="./style/postTest2.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Data Penjualan Barang</h2>
+        <form action="">
+            <div class="form-group">
+                <label for="kdBarang">Kode</label>
+                <select name="kdBarang" id="kdBarang" onchange="showDataBarang()">
+                    <option selected>--Pilih Salah Satu</option>
+                    <option value="B001">B001</option>
+                    <option value="B002">B002</option>
+                    <option value="B003">B003</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jmlhBeli">Jumlah Beli</label>
+                <input type="number" name="jmlhBeli" id="jmlhBeli" placeholder="0" oninput="showCalculation()">
+            </div>
+            <div class="form-group">
+                <label for="namaBarang">Nama Barang</label>
+                <input type="text" name="namaBarang" id="namaBarang" disabled>
+            </div>
+            <div class="form-group">
+                <label for="harga">Harga</label>
+                <input type="text" name="harga" id="harga" disabled>
+            </div>
+            <div class="form-group">
+                <label for="jmlhBayar">Jumlah Bayar</label>
+                <input type="numeric" name="jmlhBayar" id="jmlhBayar" placeholder="0" disabled>
+            </div>
+            <div class="form-group">
+                <label>Potongan</label>
+                <div class="diskon">
+                    <input type="text" name="persenPotongan" id="persenPotongan" disabled placeholder="0">%
+                    <input type="text" name="potongan" id="potongan" disabled placeholder="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="totalBayar">Total Bayar</label>
+                <input type="numeric" name="totalBayar" id="totalBayar" disabled>
+            </div>
+            <div class="form-button">
+                <button type="button" class="cta-tampilkan" onclick="renderInvoice()">TAMPILKAN</button>
+            </div>
+        </form>
+    </div>
+    <div class="invoice-container"></div>
+    <script src="./script/postTest2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+
+    <h2>Login Form</h2>
+
+    <form id="loginForm">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const messageElement = document.getElementById("message");
+
+            if (username === "" || password === "") {
+                messageElement.textContent = "Username dan Password tidak boleh kosong!";
+                messageElement.style.color = "red";
+            } else {
+                if (username === "admin" && password === "12345") {
+                    messageElement.textContent = "Login berhasil!";
+                    messageElement.style.color = "green";
+                } else {
+                    messageElement.textContent = "Username atau Password salah!";
+                    messageElement.style.color = "red";
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
